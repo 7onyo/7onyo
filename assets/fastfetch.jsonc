@@ -31,7 +31,7 @@
   "modules": [
     {
       "type": "custom",
-      "format": "\u001b[1;38;2;90;255;200monyo\u001b[0m@\u001b[1;38;2;90;255;200mGitHub\u001b[0m"
+      "format": "\u001b[1;38;2;90;255;200m7onyo\u001b[0m@\u001b[1;38;2;90;255;200mGitHub\u001b[0m"
     },
 
     {
@@ -41,81 +41,51 @@
 
     {
       "type": "custom",
-      "key": "Name",
-      "format": "test"
-    },
-    {
-      "type": "custom",
-      "key": "Username",
-      "format": "test"
-    },
-    {
-      "type": "custom",
       "key": "Role",
-      "format": "test"
+      "format": "CS Student"
     },
     {
       "type": "custom",
       "key": "Location",
-      "format": "test"
+      "format": "Timișoara, Romania"
     },
     {
       "type": "custom",
-      "key": "Website",
-      "format": "test"
-    },
-    {
-      "type": "custom",
-      "key": "GitHub",
-      "format": "test"
-    },
-    {
-      "type": "custom",
-      "key": "Email",
-      "format": "test"
+      "key": "University",
+      "format": "West University of Timișoara"
     },
 
     "break",
 
     {
       "type": "custom",
-      "key": "Focus",
-      "format": "test"
+      "key": "OS",
+      "format": "CachyOS Linux"
     },
     {
       "type": "custom",
-      "key": "Languages",
-      "format": "test"
-    },
-    {
-      "type": "custom",
-      "key": "Frameworks",
-      "format": "test"
-    },
-    {
-      "type": "custom",
-      "key": "Editor",
-      "format": "test"
+      "key": "Environment",
+      "format": "KDE Plasma (Wayland)"
     },
     {
       "type": "custom",
       "key": "Terminal",
-      "format": "test"
+      "format": "Konsole"
     },
     {
       "type": "custom",
       "key": "Shell",
-      "format": "test"
+      "format": "fish"
     },
     {
       "type": "custom",
-      "key": "OS",
-      "format": "test"
+      "key": "Editor",
+      "format": "VS Code"
     },
     {
       "type": "custom",
-      "key": "Theme",
-      "format": "test"
+      "key": "Languages",
+      "format": "C • C++ • Python • Bash"
     },
 
     "break",
@@ -123,27 +93,17 @@
     {
       "type": "custom",
       "key": "Interests",
-      "format": "test"
-    },
-    {
-      "type": "custom",
-      "key": "Currently",
-      "format": "test"
+      "format": "Development • Cloud • Linux • Open source"
     },
     {
       "type": "custom",
       "key": "Learning",
-      "format": "test"
+      "format": "Docker • Kubernetes • CI/CD"
     },
     {
       "type": "custom",
       "key": "Favorite",
-      "format": "test"
-    },
-    {
-      "type": "custom",
-      "key": "Quote",
-      "format": "test"
+      "format": "Cold Beer 🍺"
     },
 
     "break",
