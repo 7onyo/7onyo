@@ -1,0 +1,49 @@
+name: Generate Fastfetch Image
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'assets/ascii.txt'
+      - 'assets/freeze.json'
+      - 'assets/fastfetch.jsonc'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download Fastfetch
+        run: |
+          curl -sSfL https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.tar.gz -o fastfetch.tar.gz
+          mkdir -p fastfetch_tmp
+          tar -xzf fastfetch.tar.gz -C fastfetch_tmp
+          find fastfetch_tmp -name "fastfetch" -type f -exec mv {} /usr/local/bin/ \;
+          chmod +x /usr/local/bin/fastfetch
+          rm -rf fastfetch.tar.gz fastfetch_tmp
+
+      - name: Download Freeze
+        run: |
+          curl -sSfL https://github.com/charmbracelet/freeze/releases/download/v0.2.2/freeze_0.2.2_Linux_x86_64.tar.gz -o freeze.tar.gz
+          mkdir -p freeze_tmp
+          tar -xzf freeze.tar.gz -C freeze_tmp
+          find freeze_tmp -name "freeze" -type f -exec mv {} /usr/local/bin/ \;
+          chmod +x /usr/local/bin/freeze
+          rm -rf freeze.tar.gz freeze_tmp
+
+      - name: Generate Image
+        run: |
+          rm -f assets/fastfetch.svg
+          script -q -c "bash script.sh" /dev/null
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update fastfetch image"
+          file_pattern: assets/fastfetch.svg README.md
