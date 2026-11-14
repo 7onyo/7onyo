@@ -103,10 +103,16 @@
     {
       "type": "custom",
       "key": "Favorite",
-      "format": "Cold Beer 🍺"
+      "format": "A cold one 🍺"
     },
 
     "break",
+
+    {
+      "type": "custom",
+      "key": "Qotd",
+      "format": "It takes half your life before you discover life is a diy project"
+    },
 
     {
       "type": "colors",
